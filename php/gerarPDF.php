@@ -10,6 +10,22 @@ $comp = mysqli_fetch_assoc($resultado);
 // Create an instance of the class:
 $mpdf = new \Mpdf\Mpdf();
 
+$mpdf->WriteHTML('
+<style>
+
+h2,h3,p {
+    font-family: "Arial";
+}
+
+h3 {
+    color: #222;
+}
+
+
+</style>
+
+');
+
 // Write some HTML code:
 $mpdf->WriteHTML('<h1> Informação de compromisso</h1>');
 $mpdf->WriteHTML('<hr>');
